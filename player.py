@@ -7,6 +7,7 @@ FINISH_LINE_Y = 280
 
 
 class Player(Turtle):
+
     def __init__(self):
         super().__init__()
         self.penup()
@@ -17,3 +18,7 @@ class Player(Turtle):
 
     def up(self):
         self.forward(MOVE_DISTANCE)
+
+    def next_level(self, move_rate):
+        self.goto(STARTING_POSITION)
+        move_rate *= 0.9
